@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="style/style.css" />
+<title>Playrec - Download Playrec!</title>
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<div id="container">
+<div id="header">
+<h1><a href="index.html">Playrec</a></h1>
+<h2><a href="index.html">Multi-channel Matlab Audio</a></h2>
+<div id="menu">
+<ul id="navlist">
+<li><a href="index.html">Home</a></li>
+<li><a href="compiling.html">Getting&nbsp;Started</a></li>
+<li><a href="usage.html">Usage</a></li>
+<li><a href="documentation.html">Documentation</a></li>
+<li class="selected"><a href="download.html">Download</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h3>Download Playrec!</h3>
+<h4 id="playrec_source">Playrec Source</h4>
+Playrec is now hosted on GitHub: <a href="https://github.com/PlayrecForMatlab/playrec">View the Playrec source on GitHub</a>
+<ul class="download">
+<li><a href="https://github.com/PlayrecForMatlab/playrec/zipball/master">Download <strong>ZIP File</strong></a></li>
+<li><a href="https://github.com/PlayrecForMatlab/playrec/tarball/master">Download <strong>TAR Ball</strong></a></li>
+<li><a href="https://github.com/PlayrecForMatlab/playrec">View On <strong>GitHub</strong></a></li>
+</ul>
+
+<h4 id="playrec_scripts">Playrec Scripts</h4>
+The Playrec examples are now hosted on GitHub: <a href="https://github.com/PlayrecForMatlab/playrec-examples">View the Playrec examples on GitHub</a>
+<ul class="download">
+<li><a href="https://github.com/PlayrecForMatlab/playrec-examples/zipball/master">Download <strong>ZIP File</strong></a></li>
+<li><a href="https://github.com/PlayrecForMatlab/playrec-examples/tarball/master">Download <strong>TAR Ball</strong></a></li>
+<li><a href="https://github.com/PlayrecForMatlab/playrec-examples">View On <strong>GitHub</strong></a></li>
+</ul>
+
+To help to get started using Playrec, the examples provided demonstrate how to use the utility and provide some basic functionality that may be useful in other scenarios.  Scripts included include:
+<dl>
+<dt>test_playrec</dt><dd>Checks if playrec is available and then runs 3 output tests on a selected output device.  The first test shows simple blocking output, the second uses simple non-blocking output and the third shows how continuous output can be achieved without needing to precalculate all samples.</dd>
+<dt>select_play_device</dt><dd>Displays a textual list of all available output devices in the command window, and waits for user input to select.  Only a valid device number can be selected.</dd>
+<dt>select_rec_device</dt><dd>Displays a textual list of all available record devices in the command window, and waits for user input.  Only a valid device number can be selected.</dd>
+<dt>play_wav</dt><dd>Plays a mono or stereo wav file using Playrec.  The samples are loaded from the file in sections, demonstrating how to create a continuous output without glitches.</dd>
+<dt>play_ambi_wav</dt><dd>Plays a WAVEX Ambisonic Wav file using Playrec.  The samples are loaded from the file and converted to the required output in sections, demonstrating how to create a continuous output without glitches.  This utilises <a href="download/wavexread.m">wavexread.m</a>, a version of wavread modified by Sylvain Choisel to read wave-format-extensible files.</dd>
+<dt>spectrum_analyser</dt><dd>Uses Playrec to show a realtime spectrum and waveform, and some of the possibilities that Playrec can be used for.</dd>
+<dt>bformat_dec</dt><dd>Decodes a B-Format signal into speaker feeds, as used by play_ambi_wav.</dd>
+<dt>bformat_enc</dt><dd>Encodes a mono signal into a B-Format signal at a specified azimuth and elevation.</dd>
+<dt>bformat_rot_tilt_tumble</dt><dd>Rotates, tilts and tumbles a B-Format signal.</dd>
+<dt>loop_back</dt><dd>Demonstrates simultaneous input and output by looping an input channel onto one or more outputs.  By optimising parameters the latency can be reduced, depending on the target platform.</dd>
+</dl>
+
+If you have any other scripts please <a href="contact.html">send them to me</a>.<br /><br />
+
+<h4 id="mexopts">mexopts.bat</h4>
+<a href="download/mexopts.bat">Download Example mexopts.bat</a><br /><br />
+When compiling on Windows the options Matlab uses are stored in mexopts.bat.  In most cases after running <span class="code">mex -setup</span> in Matlab this file should be correctly configured and not need to be changed.  However in some cases it does need to be changed, including when Matlab cannot automatically detect the required compiler or the system configuration is unusual.  Although the settings in this file need to be different for different compilers and versions of Matlab, this version of mexopts.bat tries to be as generic as possible for the Microsoft Visual C++ compilers.  Due to limited access to different versions of Matlab, this has not been thoroughly tested and so is not guaranteed to work.<br />
+<br />
+To use this file download it so that it is in the current directory within Matlab when the compiling occurs.  In verbose mode the location of the options file being used will be displayed near the start of the output in the Command Window.  Depending on the system and compiler the variables VCINSTALLDIR, MSSdk and LIBLOC may need to be changed.  Possible examples are given in the file, although depending on the installation alternative paths may be required.<br />
+<br />Even if the version of Matlab being used does not support a particular version of Microsoft Visual C++ compiler, by configuring the mexopts.bat file it may be possible to get the utility to compile.
+</div><div id="footer"><div id="copy">&copy; 2008-2014 Robert Humphrey</div><a href="license.html">Software License</a></div></div>
+<script src="javascripts/scale.fix.js"></script>
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+	var pageTracker = _gat._getTracker("UA-3319302-1");
+	pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body></html>
+

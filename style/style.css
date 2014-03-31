@@ -1,0 +1,144 @@
+a, a:link, a:visited, a:hover {text-decoration: none;}
+
+/* text-align in body and #container are for browsers
+   that don't support auto left and right margins */
+body {
+ text-align: center;
+ font-family: verdana, regular;
+}
+
+#container {
+ width: 90%;
+ margin: 10px auto;
+ text-align: left;
+ background-color: #036;
+ color: #CCD;
+}
+
+#container a {color: #CCD;}
+
+#header {
+ width: 100%;
+ text-align: center;
+ padding: 0.3em 0;
+}
+
+h1, h2, h3, h4 {
+ margin: 0.3em 0;
+ padding: 0;
+}
+
+#header h1 {font-size: xx-large;}
+
+#header h2 {font-size: large;}
+
+h3 {font-size: large;}
+
+#menu {
+ background-color: #099;
+ margin: 10px 20px;
+}
+
+#menu ul {
+ padding: 0;
+ margin: 0;
+ list-style-type: none;
+ width: 100%;
+}
+
+#menu li {display: inline;}
+
+#menu li a,
+#menu li a:link,
+#menu li a:visited
+{
+ color: #fff;
+ padding: 0.0em 1em;
+ text-decoration: none;
+ border-right: 1px solid #fff;
+ border-left: 1px solid #fff;
+}
+
+#menu li.selected a {font-weight: bold;}
+
+#menu li a:hover {background-color: #369;}
+
+#main {clear: both;}
+
+#leftnav {
+ vertical-align: top;
+ width: 140px;
+ float: left;
+ margin: 0;
+ padding: 10px;
+}
+
+/* Main content div */
+
+#content {
+ /* margin-left: 180px; */
+ margin: 0px 20px;
+ padding: 1em;
+ background-color: #DADAFF;
+ color: black;
+}
+
+#content a {color: #099;}
+
+#content a:hover {color: #936;}
+
+#content dl {
+ margin: 1em 2em;
+}
+
+#content dd {
+ margin-bottom: 1.4em;
+ margin-top: 0.5em;
+}
+
+#content dt {
+ font-weight:bold;
+}
+
+#content .code { 
+ font-family: lucida console, lucida sans typewriter, courier;
+ font-size: 80%;
+ line-height: 1.1em;
+}
+
+#content li {margin-bottom: 0.5em;}
+
+#footer {
+ clear: both;
+ margin: 0px 20px;
+ padding: .5em;
+}
+
+#footer #copy {
+ float: right;
+}
+ 
+div.command {
+ margin: 1em 0.0em;
+ padding: 0.5em;
+ background-color: #eef;
+}
+
+div.command_info {
+ margin: 1em 0.5em;
+ padding: 0.5em;
+ background-color: #dadaff;
+}
+
+div.command td {
+ vertical-align: top;
+ padding: 0.2em 0.5em;
+}
+
+div.top_link {
+ margin: 0 0 1em 0;
+ width: 100%;
+ text-align: right;
+ font-size: 75%;
+}
+

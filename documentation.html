@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="style/style.css" />
+<title>Playrec - Available playrec commands</title>
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<div id="container">
+<div id="header">
+<h1><a href="index.html">Playrec</a></h1>
+<h2><a href="index.html">Multi-channel Matlab Audio</a></h2>
+<div id="menu">
+<ul id="navlist">
+<li><a href="index.html">Home</a></li>
+<li><a href="compiling.html">Getting&nbsp;Started</a></li>
+<li><a href="usage.html">Usage</a></li>
+<li class="selected"><a href="documentation.html">Documentation</a></li>
+<li><a href="download.html">Download</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<h3>Available playrec commands</h3>
+This page describes all available Playrec commands.  See <a href="usage.html">usage</a> for more information on how and when to use the commands.<br /><table><tr><td><a href="#help">help</a></td><td>Provides usage information for each command</td></tr>
+<tr><td><a href="#about">about</a></td><td>Displays information about the playrec utility</td></tr>
+<tr><td><a href="#overview">overview</a></td><td>Displays an overview on using this playrec utility</td></tr>
+<tr><td><a href="#getDevices">getDevices</a></td><td>Returns a list of available audio devices</td></tr>
+<tr><td><a href="#init">init</a></td><td>Initialises the utility</td></tr>
+<tr><td><a href="#reset">reset</a></td><td>Resets the system to allow re-initialisation</td></tr>
+<tr><td><a href="#isInitialised">isInitialised</a></td><td>Indicates if the system is initialised</td></tr>
+<tr><td><a href="#playrec">playrec</a></td><td>Adds a new page with simultaneous input and output</td></tr>
+<tr><td><a href="#play">play</a></td><td>Adds a new output only page</td></tr>
+<tr><td><a href="#rec">rec</a></td><td>Adds a new input only page</td></tr>
+<tr><td><a href="#pause">pause</a></td><td>Sets or queries the current pause state</td></tr>
+<tr><td><a href="#block">block</a></td><td>Waits for the specified page to finish before returning</td></tr>
+<tr><td><a href="#isFinished">isFinished</a></td><td>Indicates if the specified page has finished</td></tr>
+<tr><td><a href="#getRec">getRec</a></td><td>Returns the samples recorded in a page</td></tr>
+<tr><td><a href="#delPage">delPage</a></td><td>Deletes the specified page or all pages</td></tr>
+<tr><td><a href="#getCurrentPosition">getCurrentPosition</a></td><td>Returns the currently active page and sample number</td></tr>
+<tr><td><a href="#getLastFinishedPage">getLastFinishedPage</a></td><td>Returns the page number of the last completed page</td></tr>
+<tr><td><a href="#getPageList">getPageList</a></td><td>Returns an ordered list of all page numbers</td></tr>
+<tr><td><a href="#getFramesPerBuffer">getFramesPerBuffer</a></td><td>Returns internal number of frames per buffer</td></tr>
+<tr><td><a href="#getSampleRate">getSampleRate</a></td><td>Returns the current sample rate</td></tr>
+<tr><td><a href="#getStreamStartTime">getStreamStartTime</a></td><td>Returns the time at which the stream was started</td></tr>
+<tr><td><a href="#getPlayDevice">getPlayDevice</a></td><td>Returns the current output (play) device</td></tr>
+<tr><td><a href="#getPlayMaxChannel">getPlayMaxChannel</a></td><td>Returns the current maximum output (play) channel</td></tr>
+<tr><td><a href="#getPlayLatency">getPlayLatency</a></td><td>Returns the current output (play) device latency</td></tr>
+<tr><td><a href="#getRecDevice">getRecDevice</a></td><td>Returns the current input (record) device</td></tr>
+<tr><td><a href="#getRecMaxChannel">getRecMaxChannel</a></td><td>Returns the current maximum input (record) channel</td></tr>
+<tr><td><a href="#getRecLatency">getRecLatency</a></td><td>Returns the current input (record) device latency</td></tr>
+<tr><td><a href="#resetSkippedSampleCount">resetSkippedSampleCount</a></td><td>Resets the skipped samples counter</td></tr>
+<tr><td><a href="#getSkippedSampleCount">getSkippedSampleCount</a></td><td>Returns the number of skipped samples</td></tr>
+</table><div class="command"><h3 id="help">help</h3><div class="command_info"><h4>Input Arguments:</h4><table><tr><td><b>commandName</b></td><td>name of the command for which information is required</td></tr>
+</table></div><div class="command_info"><h4>Description:</h4>Displays command specific usage instructions.</div><div class="top_link"><a href="#">Top</a></div></div><div class="command"><h3 id="about">about</h3><div class="command_info"><h4>Output Arguments:</h4><table><tr><td><b>aboutInfo</b></td><td>String containing information about this build of playrec. If no output argument is specified then the information is printed in the command window.</td></tr>
+</table></div><div class="command_info"><h4>Description:</h4>Displays information about the playrec utility</div><div class="top_link"><a href="#">Top</a></div></div><div class="command"><h3 id="overview">overview</h3><div class="command_info"><h4>Output Arguments:</h4><table><tr><td><b>overviewInfo</b></td><td>String containing information about how to use playrec. If no output argument is specified then the information is printed in the command window.</td></tr>
+</table></div><div class="command_info"><h4>Description:</h4>Displays an overview on using this playrec utility</div><div class="top_link"><a href="#">Top</a></div></div><div class="command"><h3 id="getDevices">getDevices</h3><div class="command_info"><h4>Output Arguments:</h4><table><tr><td><b>deviceList</b></td><td>Structure array containing the following fields for each device:<br />
+	'deviceID' - ID used to refer to the device,<br />
+	'name' - textual name of the device,<br />
+	'hostAPI' - the host API used to access the device,<br />
+	'defaultLowInputLatency' - device default input latency used for interactive performance.  This is the value suggested to the soundcard when the device is used for input.<br />
+	'defaultLowOutputLatency' - device default output latency used for interactive performance.  This is the value suggested to the soundcard when the device is used for output.<br />
+	'defaultHighInputLatency' - device default input latency for robust non-interactive applications (eg. playing sound files),<br />
+	'defaultHighOutputLatency' - device default output latency for robust non-interactive applications (eg. playing sound files),<br />
+	'defaultSampleRate' - device default sample rate,<br />
+	'inputChans' - maximum number of input channels supported by the device<br />
+	'outputChans' - maximum number of output channels supported by the device</td></tr>
+</table></div><div class="command_info"><h4>Description:</h4>Returns information on the available devices within the system, including ID, name, host API and number of channels supported.</div><div class="top_link"><a href="#">Top</a></div></div><div class="command"><h3 id="init">init</h3><div class="command_info"><h4>Input Arguments:</h4><table><tr><td><b>sampleRate</b></td><td>the sample rate at which both devices will operate</td></tr>
+<tr><td><b>playDevice</b></td><td>the ID of the device to be used for sample output (as returned by 'getDevices'), or -1 for no device (ie output not required)</td></tr>
+<tr><td><b>recDevice</b></td><td>the ID of the device to be used for sample input (as returned by 'getDevices'), or -1 for no device (ie input not required)</td></tr>
+<tr><td><b>playMaxChannel</b><br />{optional}</td><td>a number greater than or equal to the maximum channel that will be used for output.  This must be less than or equal to the maximum number of output channels that the device supports.  The value is ignored if playDevice is -1.</td></tr>
+<tr><td><b>recMaxChannel</b><br />{optional}</td><td>a number greater than or equal to the maximum channel that will be used for input.  This must be less than or equal to the maximum number of input channels that the device supports.  The value is ignored if recDevice is -1.</td></tr>
+<tr><td><b>framesPerBuffer</b><br />{optional}</td><td>the number of samples to be processed in each callback within the utility (ie the length of each block of samples transferred between the utility and the soundcard).  The lower the value specified the shorter the latency but also the greater the likelihood of glitches within the audio.  This has no influence on the size of pages that can be used.  The default is 0 which lets the utility use an optimal, and potentially different, value in each callback.  A value other than the default may introduce a second layer of buffering, increasing latency, and so should only be used in exceptional circumstances.</td></tr>
+<tr><td><b>playSuggestedLatency</b><br />{optional}</td><td>the play latency, in seconds, the device should try to use where possible.  Defaults to the default low output latency for the device.</td></tr>
+<tr><td><b>recSuggestedLatency</b><br />{optional}</td><td>the record latency, in seconds, the device should try to use where possible.  Defaults to the default low input latency for the device.</td></tr>
+</table></div><div class="command_info"><h4>Description:</h4>Configures the utility for audio input and/or output based on the specified configuration.  If successful the chosen device(s) will be running in the background waiting for the first pages to be received.  If unsuccessful an error will be generated containing an error number and description.<br />
+<br />
+All channel numbers are assumed to start at 1.  The maximum number of channels support by the device will be used if the maximum channel number is not specified.  Specifying a maximum number of channels verifies that the device will support them and slightly reduces the utility's processor usage.<br />
+<br />
+If an optional value is specified, all previous optional values must also be specified.</div><div class="top_link"><a href="#">Top</a></div></div><div class="command"><h3 id="reset">reset</h3><div class="command_info"><h4>Description:</h4>Resets the system to its state prior to initialisation through the 'init' command.  This includes deleting all pages and stopping the connection to the previously selected audio device(s).  Generates an error if the utility is not already initialised - use 'isInitialised' to determine if the utility is initialised.<br />
+<br />
+Use with care as there is no way to recover previously recorded data once this has been called.</div><div class="top_link"><a href="#">Top</a></div></div><div class="command"><h3 id="isInitialised">isInitialised</h3><div class="command_info"><h4>Output Arguments:</h4><table><tr><td><b>currentState</b></td><td>1 if the utility is currently initialised, otherwise 0.</td></tr>
+</table></div><div class="command_info"><h4>Description:</h4>Indicates if the system is currently initialised, and hence if 'reset' or 'init' can be called without generating an error.</div><div class="top_link"><a href="#">Top</a></div></div><div class="command"><h3 id="playrec">playrec</h3><div class="command_info"><h4>Input Arguments:</h4><table><tr><td><b>playBuffer</b></td><td>a MxN matrix containing the samples to be output.  M is the number of samples and N is the number of channels of data.</td></tr>
+<tr><td><b>playChanList</b></td><td>a 1xN vector containing the channels on which the playBuffer samples should be output.  N is the number of channels of data, and should be the same as playBuffer (a warning is generated if they are different, but the utility will still try and create the page).  Can only contain each channel number once, but the channel order is not important and does not need to include all the channels the device supports. All output channels no specified will automatically output zeros.  The maximum channel number cannot be greater than that specified during initialisation.</td></tr>
+<tr><td><b>recDuration</b></td><td>the number of samples that should be recorded in this page, or -1 to record the same number of samples as in playBuffer.</td></tr>
+<tr><td><b>recChanList</b></td><td>a row vector containing the channel numbers of all channels to be recorded.  Can only contain each channel number once, but the channel order is not important and does not need to include all the channels the device supports.  This order of channels is used when recorded samples are returned by 'getRec'.  The maximum channel number cannot be greater than that specified during initialisation.</td></tr>
+</table></div><div class="command_info"><h4>Output Arguments:</h4><table><tr><td><b>pageNumber</b></td><td>a unique integer number identifying the page that has been added - use this with all other functions that query specific pages, such as 'isFinished'.</td></tr>
+</table></div><div class="command_info"><h4>Description:</h4>Adds a new page containing both sample input (recording) and output (playing).  Generates an error if the required memory cannot be allocated or if any other problems are encountered.<br />
+<br />
+The length of the page is equal to whichever is longer: the number of samples to play or the number of samples to record.</div><div class="top_link"><a href="#">Top</a></div></div><div class="command"><h3 id="play">play</h3><div class="command_info"><h4>Input Arguments:</h4><table><tr><td><b>playBuffer</b></td><td>a MxN matrix containing the samples to be output.  M is the number of samples and N is the number of channels of data.</td></tr>
+<tr><td><b>playChanList</b></td><td>a 1xN vector containing the channels on which the playBuffer samples should be output.  N is the number of channels of data, and should be the same as playBuffer (a warning is generated if they are different, but the utility will still try and create the page).  Can only contain each channel number once, but the channel order is not important and does not need to include all the channels the device supports. All output channels no specified will automatically output zeros.  The maximum channel number cannot be greater than that specified during initialisation.</td></tr>
+</table></div><div class="command_info"><h4>Output Arguments:</h4><table><tr><td><b>pageNumber</b></td><td>a unique integer number identifying the page that has been added - use this with all other functions that query specific pages, such as 'isFinished'.</td></tr>
+</table></div><div class="command_info"><h4>Description:</h4>Adds a new page containing only sample output (playing).  Generates an error if the required memory cannot be allocated or if any other problems are encountered.<br />
+<br />
+The page is the same length as that of playBuffer.</div><div class="top_link"><a href="#">Top</a></div></div><div class="command"><h3 id="rec">rec</h3><div class="command_info"><h4>Input Arguments:</h4><table><tr><td><b>recDuration</b></td><td>the number of samples that should be recorded on each channel specified in recChanList.</td></tr>
+<tr><td><b>recChanList</b></td><td>a row vector containing the channel numbers of all channels to be recorded.  Can only contain each channel number once, but the channel order is not important and does not need to include all the channels the device supports.  This order of channels is used when recorded samples are returned by 'getRec'.  The maximum channel number cannot be greater than that specified during initialisation.</td></tr>
+</table></div><div class="command_info"><h4>Output Arguments:</h4><table><tr><td><b>pageNumber</b></td><td>a unique integer number identifying the page that has been added - use this with all other functions that query specific pages, such as 'isFinished'.</td></tr>
+</table></div><div class="command_info"><h4>Description:</h4>Adds a new page containing only sample input (recording).  Generates an error if the required memory cannot be allocated or if any other problems are encountered.<br />
+<br />
+The page is recDuration samples long.</div><div class="top_link"><a href="#">Top</a></div></div><div class="command"><h3 id="pause">pause</h3><div class="command_info"><h4>Input Arguments:</h4><table><tr><td><b>newPause</b><br />{optional}</td><td>the new state of the utility: 1 to pause or 0 to resume the stream.  This can be either a scalar or logical value.  If newState is the same as the current state of the utility, no change occurs.</td></tr>
+</table></div><div class="command_info"><h4>Output Arguments:</h4><table><tr><td><b>currentState</b></td><td>the state of the utility (including the update to newPause if newPause is specified): 1 if the utility is paused or otherwise 0.</td></tr>
+</table></div><div class="command_info"><h4>Description:</h4>Queries or updates the current pause state of the utility.  If no argument is supplied then just returns the current pause status, otherwise returns the status after applying the change to newPause.</div><div class="top_link"><a href="#">Top</a></div></div><div class="command"><h3 id="block">block</h3><div class="command_info"><h4>Input Arguments:</h4><table><tr><td><b>pageNumber</b><br />{optional}</td><td>the number of the page to wait until finished</td></tr>
+</table></div><div class="command_info"><h4>Output Arguments:</h4><table><tr><td><b>completionState</b></td><td>1 if either pageNumber is a valid page and has finished being processed or pageNumber was not specified and all pages have finished being processed.  Note that page validity refers to when the function was called and so now the page has finished it may no longer be a valid page due to automatic page condensing.<br />
+<br />
+-1 if the specified page is invalid or no longer exists.  This includes pages that have automatically been condensed, and hence have finished.<br />
+<br />
+0 if the stream is currently paused and neither return values of 1 or -1 apply.</td></tr>
+</table></div><div class="command_info"><h4>Description:</h4>Waits for the specified page to finish or, if no pageNumber is supplied, waits until all pages have finish.  Note that the command returns immediately if the utility is paused to avoid the system locking up.<br />
+<br />
+This uses very little processing power whilst waiting for the page to finish, although as a result will not necessarily return as soon as the page specified finishes.  For a faster response to pages finishing use the 'isFinished' command in a tight while loop within MATLAB, such as<br />
+<br />
+	while(playrec('isFinished', pageNumber) == 0);end;<br />
+<br />
+This will run the processor at full power and will be very wasteful, but it does reduce the delay between a page finishing and the MATLAB code continuing, which is essential when trying to achieve very low latency.</div><div class="top_link"><a href="#">Top</a></div></div><div class="command"><h3 id="isFinished">isFinished</h3><div class="command_info"><h4>Input Arguments:</h4><table><tr><td><b>pageNumber</b><br />{optional}</td><td>the number of the page being tested</td></tr>
+</table></div><div class="command_info"><h4>Output Arguments:</h4><table><tr><td><b>completionState</b></td><td>1 if either pageNumber is a valid page that has finished being processed or pageNumber was not specified and all pages have finished being processed.<br />
+<br />
+-1 if the specified page is invalid or no longer exists.  This includes pages that have automatically been condensed, and hence have finished.<br />
+<br />
+0 if either pageNumber is a valid page that has not finished being processed or pageNumber was not specified and not all pages have finished being processed.</td></tr>
+</table></div><div class="command_info"><h4>Description:</h4>Indicates if the specified page is finished or, if no pageNumber is supplied, indicates if all pages have finished.</div><div class="top_link"><a href="#">Top</a></div></div><div class="command"><h3 id="getRec">getRec</h3><div class="command_info"><h4>Input Arguments:</h4><table><tr><td><b>pageNumber</b></td><td>used to identifying the page containing the required recorded data</td></tr>
+</table></div><div class="command_info"><h4>Output Arguments:</h4><table><tr><td><b>recBuffer</b></td><td>a MxN matrix where M is the number of samples that have been recorded and N is the number of channels of data</td></tr>
+<tr><td><b>recChanList</b></td><td>a 1xN vector containing the channel numbers associated with each channel in recBuffer.  These channels are in the same order as that specified when the page was added.</td></tr>
+</table></div><div class="command_info"><h4>Description:</h4>Returns all the recorded data available for the page identified by pageNumber.  If the page specified does not exist, was not specified to record any data, or has not yet started to record any data then empty array(s) are returned.  If the page is currently being processed, only the recorded data currently available is returned.</div><div class="top_link"><a href="#">Top</a></div></div><div class="command"><h3 id="delPage">delPage</h3><div class="command_info"><h4>Input Arguments:</h4><table><tr><td><b>pageNumber</b><br />{optional}</td><td>the number of the page to be deleted.</td></tr>
+</table></div><div class="command_info"><h4>Output Arguments:</h4><table><tr><td><b>completionState</b></td><td>0 if nothing is deleted (either there are no pages in the page list or, if pageNumber was specified, no page with the specified number exists), otherwise 1 is returned.</td></tr>
+</table></div><div class="command_info"><h4>Description:</h4>Deletes either the specified page or, if no pageNumber is supplied, deletes all pages.  Pages can be in any state when they are deleted - the do not have to be finished and they can even be deleted part way through being processed without any problems (in this case the utility will automatically continue with the next page in the page list).</div><div class="top_link"><a href="#">Top</a></div></div><div class="command"><h3 id="getCurrentPosition">getCurrentPosition</h3><div class="command_info"><h4>Output Arguments:</h4><table><tr><td><b>currentPage</b></td><td>the current page number, or -1 if either the utility is not initialised or no page is currently being processed (there are no pages in the list or all pages are finished).</td></tr>
+<tr><td><b>currentSample</b></td><td>the current sample number within currentPage, or -1 if currentPage is also -1.  This is only accurate to maxFramesPerBuffer samples, as returned by 'getFramesPerBuffer'.</td></tr>
+</table></div><div class="command_info"><h4>Description:</h4>Returns the sample and page number for the last sample transferred to the soundcard.  Due to sample buffering this will always be slightly further through a page than the actual sample being output by the soundcard at that point in time.  For pages that record input, the sample number shows how many samples have been recorded by the page, up to the recording length limit of the page.</div><div class="top_link"><a href="#">Top</a></div></div><div class="command"><h3 id="getLastFinishedPage">getLastFinishedPage</h3><div class="command_info"><h4>Output Arguments:</h4><table><tr><td><b>lastPage</b></td><td>pageNumber of the most recently finished page still resident in memory.</td></tr>
+</table></div><div class="command_info"><h4>Description:</h4>Returns the page number of the last finished page still resident in memory.  Due to automatic condensing/removal of pages that are no longer required, such as finished pages with only output data, this may not be the most recent page to have finished.  Put another way, this returns the page number of the last finished page in the pageList returned by 'getPageList'.</div><div class="top_link"><a href="#">Top</a></div></div><div class="command"><h3 id="getPageList">getPageList</h3><div class="command_info"><h4>Output Arguments:</h4><table><tr><td><b>pageList</b></td><td>a 1xN vector containing the chronological list of pages, where N is the number of pages resident in memory.</td></tr>
+</table></div><div class="command_info"><h4>Description:</h4>Returns a list of all the pages that are resident in memory.  The list is ordered chronologically from the earliest to latest addition.<br />
+<br />
+Due to automatic condensing/removal of pages that are no longer required, such as finished pages with only output data, this will not be a complete list of all pages that have ever been used with the utility.</div><div class="top_link"><a href="#">Top</a></div></div><div class="command"><h3 id="getFramesPerBuffer">getFramesPerBuffer</h3><div class="command_info"><h4>Output Arguments:</h4><table><tr><td><b>suggestedFramesPerBuffer</b></td><td>the number of frames returned by the utility internally during each callback as specified during initialisation, or -1 if the utility is not initialised.</td></tr>
+<tr><td><b>minFramesPerBuffer</b></td><td>the minimum number of frames actually processed by the utility internally during a callback, or -1 if the utility is not initialised.</td></tr>
+<tr><td><b>maxFramesPerBuffer</b></td><td>the maximum number of frames actually proccessed by the utility internally during a callback, or -1 if the utility is not initialised.</td></tr>
+</table></div><div class="command_info"><h4>Description:</h4>Returns the number of frames (samples) that are processed by the callback internally within the utility (ie the length of each block of samples sent by the utility to the soundcard).  This is either the value specified when using 'init', or the default value if the optional argument was not specified. A value of 0 means the utility is using an optimal, but potentially varying, value.</div><div class="top_link"><a href="#">Top</a></div></div><div class="command"><h3 id="getSampleRate">getSampleRate</h3><div class="command_info"><h4>Output Arguments:</h4><table><tr><td><b>suggestedSampleRate</b></td><td>the sample rate used during initialisation or -1 if the utility is not initialised.</td></tr>
+<tr><td><b>sampleRate</b></td><td>the current sample rate (obtained from the hardware if possible) or -1 if the utility is not initialised.</td></tr>
+</table></div><div class="command_info"><h4>Description:</h4>Returns the sample rate that was specified when using 'init'.</div><div class="top_link"><a href="#">Top</a></div></div><div class="command"><h3 id="getStreamStartTime">getStreamStartTime</h3><div class="command_info"><h4>Output Arguments:</h4><table><tr><td><b>streamStartTime</b></td><td>time at which the stream was started (in seconds since the Epoch), or -1 if the utility is not initialised.</td></tr>
+</table></div><div class="command_info"><h4>Description:</h4>Returns the unix time when the stream was started (number of seconds since the standard epoch of 01/01/1970).<br />
+<br />
+This is included so that when using the utility to run experiments it is possible to determine which tests are conducted as part of the same stream, and so identify if restarting the stream (and hence the soundcard in some scenarios) may have caused variations in results.</div><div class="top_link"><a href="#">Top</a></div></div><div class="command"><h3 id="getPlayDevice">getPlayDevice</h3><div class="command_info"><h4>Output Arguments:</h4><table><tr><td><b>playDevice</b></td><td>the deviceID for the output (play) device or -1 if no device was specified during initialisation or the utility is not initialised.</td></tr>
+</table></div><div class="command_info"><h4>Description:</h4>Returns the deviceID (as returned by 'getDevices') for the currently selected output device.</div><div class="top_link"><a href="#">Top</a></div></div><div class="command"><h3 id="getPlayMaxChannel">getPlayMaxChannel</h3><div class="command_info"><h4>Output Arguments:</h4><table><tr><td><b>playMaxChannel</b></td><td>the maximum output (play) channel number that can currently be used, or -1 if either no play device was specified during initialisation or the utility is not initialised.</td></tr>
+</table></div><div class="command_info"><h4>Description:</h4>Returns the number of the maximum output (play) channel that can currently be used.  This might be less than the number of channels that the device can support if a lower limit was specified during initialisation.</div><div class="top_link"><a href="#">Top</a></div></div><div class="command"><h3 id="getPlayLatency">getPlayLatency</h3><div class="command_info"><h4>Output Arguments:</h4><table><tr><td><b>playSuggestedLatency</b></td><td>the suggested latency for the output (play) device used during initialisation, or -1 if no device was specified during initialisation or the utility is not initialised.</td></tr>
+<tr><td><b>playLatency</b></td><td>the actual latency for the output (play) device or -1 if no device was specified during initialisation or the utility is not initialised.</td></tr>
+</table></div><div class="command_info"><h4>Description:</h4>Returns the output latency for the currently selected output device as well as the suggested output latency used during initialisation</div><div class="top_link"><a href="#">Top</a></div></div><div class="command"><h3 id="getRecDevice">getRecDevice</h3><div class="command_info"><h4>Output Arguments:</h4><table><tr><td><b>recDevice</b></td><td>the deviceID for the input (record) device or -1 if no device was specified during initialisation or the utility is not initialised.</td></tr>
+</table></div><div class="command_info"><h4>Description:</h4>Returns the deviceID (as returned by 'getDevices') for the currently selected input device.</div><div class="top_link"><a href="#">Top</a></div></div><div class="command"><h3 id="getRecMaxChannel">getRecMaxChannel</h3><div class="command_info"><h4>Output Arguments:</h4><table><tr><td><b>recMaxChannel</b></td><td>the maximum input (record) channel number that can currently be used, or -1 if either no record device was specified during initialisation or the utility is not initialised.</td></tr>
+</table></div><div class="command_info"><h4>Description:</h4>Returns the number of the maximum input (record) channel that can currently be used.  This might be less than the number of channels that the device can support if a lower limit was specified during initialisation.</div><div class="top_link"><a href="#">Top</a></div></div><div class="command"><h3 id="getRecLatency">getRecLatency</h3><div class="command_info"><h4>Output Arguments:</h4><table><tr><td><b>recSuggestedLatency</b></td><td>the suggested latency for the input (record) device used during initialisation, or -1 if no device was specified during initialisation or the utility is not initialised.</td></tr>
+<tr><td><b>recLatency</b></td><td>the actual latency for the input (record) device or -1 if no device was specified during initialisation or the utility is not initialised.</td></tr>
+</table></div><div class="command_info"><h4>Description:</h4>Returns the input latency for the currently selected input device as well as the suggested input latency used during initialisation</div><div class="top_link"><a href="#">Top</a></div></div><div class="command"><h3 id="resetSkippedSampleCount">resetSkippedSampleCount</h3><div class="command_info"><h4>Description:</h4>Resets the counter containing the number of samples that have been 'missed' due to no new pages existing in the page list.  See the help on 'getSkippedSampleCount' for more information.</div><div class="top_link"><a href="#">Top</a></div></div><div class="command"><h3 id="getSkippedSampleCount">getSkippedSampleCount</h3><div class="command_info"><h4>Output Arguments:</h4><table><tr><td><b>skippedSampleCount</b></td><td>the number of frames (samples per channel) transferred with the soundcard that have occurred when there are no unfinished pages in the pageList, or -1 if the utility is not initialised</td></tr>
+</table></div><div class="command_info"><h4>Description:</h4>Returns the counter containing the number of samples that have been 'missed' due to no new pages existing in the page list when the soundcard requires samples to be transferred.  The term 'missed' is specifically referring to the case where multiple consecutive pages are used to record a continuous audio stream (and so input samples are missed), but is the same also for output samples because the input and output samples within a page are always processed simultaneously.<br />
+<br />
+This value is incremented by one for every frame (ie one sample on every input/output channel) of data communicated between the utility and soundcard that occurred whilst there were no new pages in the page list.  Using this it is possible to determine, from within MATLAB, if any glitches in the audio have occurred through not adding a new page to the page list before all other pages have finished, such as in the case where the code within MATLAB is trying to play/record a continuous stream.<br />
+<br />
+The counter can be reset using 'resetSkippedSampleCount' so to check for any breaks in a continuous stream of pages: add the first page of the stream; reset the counter; continue to add pages as required; if getSkippedSampleCount ever returns a value greater than zero then there has been a break in the stream.</div><div class="top_link"><a href="#">Top</a></div></div>
+</div><div id="footer"><div id="copy">&copy; 2008-2014 Robert Humphrey</div><a href="license.html">Software License</a></div></div>
+<script src="javascripts/scale.fix.js"></script>
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+	var pageTracker = _gat._getTracker("UA-3319302-1");
+	pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body></html>
+
